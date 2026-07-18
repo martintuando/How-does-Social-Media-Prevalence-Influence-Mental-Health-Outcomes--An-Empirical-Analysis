@@ -1,16 +1,16 @@
-Master's Thesis: Social Media and Mental Health at the U.S. County Level
+How does Social Media Prevalence 
+Influence Mental Health Outcomes?  
+An Empirical Analysis
 
-This repository contains the replication package, empirical workflow, and analysis scripts for a Master's thesis examining the causal impact of social media exposure on mental health across $3,108$ U.S. counties.
+This repository contains the replication package, empirical workflow, and analysis scripts for my Master's thesis examining the causal impact of social media exposure on mental health across $3,108$ U.S. counties.
 
 To address the fundamental challenge of endogeneity in estimating the causal effect of social media on mental health, the empirical framework leverages two distinct quasi-natural experiments using a Two-Stage Least Squares (2SLS) Instrumental Variable (IV) design.
 
 1. Project & Data Overview
 
-The analysis links county-level social media exposure to health outcomes across 50 states. The dataset integrates multiple high-resolution data sources:
-
 Mental Health Outcomes:
-
-Self-reported measures of physical health, mental health, and health behaviors from the Behavioral Risk Factor Surveillance System (BRFSS).
+Primary source: County Health Rankings & Roadmaps (CHR&R), a collaboration between the Robert Wood Johnson Foundation and the University of Wisconsin Population Health Institute.
+(Self-reported measures of physical health, mental health, and health behaviors from the Behavioral Risk Factor Surveillance System (BRFSS).)
 
 Mortality metrics (Suicides and Mental/Behavioral disorders leading to death) from the CDC WONDER database.
 
@@ -18,7 +18,7 @@ Social Media Measures:
 
 Twitter Usage: Proxy derived from an archive of 475 million geo-located tweets compiled by Kinder-Kurlanda et al. (2017) and mapped to counties by Fujiwara et al. (2021).
 
-Facebook Social Connectedness Index (SCI): Anonymized Facebook friendship networks indicating geographic density (specifically the share of a county's Facebook friends living within 500 miles, standardized to a Z-score) published by Bailey et al. (2018).
+Facebook Social Connectedness Index (SCI): Anonymized Facebook friendship networks indicating geographic density (specifically the share of a county's Facebook friends living within 500 miles, standardized to a Z-score) published by jia and Benson (2021).
 
 County-Level Covariates:
 

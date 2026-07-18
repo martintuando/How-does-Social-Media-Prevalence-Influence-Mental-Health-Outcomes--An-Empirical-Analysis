@@ -1,4 +1,6 @@
-Master's Thesis: Social Media and Mental Health at the U.S. County Level
+How does Social Media Prevalence 
+Influence Mental Health Outcomes?  
+An Empirical Analysis
 
 This repository contains the replication package, empirical workflow, and analysis scripts for a Master's thesis examining the causal impact of social media exposure on mental health across $3,108$ U.S. counties.
 

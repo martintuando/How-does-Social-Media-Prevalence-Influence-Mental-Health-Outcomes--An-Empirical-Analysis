@@ -18,7 +18,11 @@ Social Media Measures:
 
 Twitter Usage: Proxy derived from an archive of 475 million geo-located tweets compiled by Kinder-Kurlanda et al. (2017) and mapped to counties by Fujiwara et al. (2021).
 
-Facebook Social Connectedness Index (SCI): Anonymized Facebook friendship networks indicating geographic density (specifically the share of a county's Facebook friends living within 500 miles, standardized to a Z-score) published by jia and Benson (2021).
+Instrumental Variable (IV): Twitter adoption during the 2007 SXSW festival (Fujiwara et al., 2021) is used as an exogenous shock for causal identification.
+
+Facebook: SCI Data,  the intensity of social connections between two geographic areas. The core of this analysis relies on the share of a county’s Facebook friends living within 500 miles.
+
+Instrumental Variable (IV): Facebook early rollout (Braghieri et al., 2021) is used as an exogenous shock for causal identification.
 
 County-Level Covariates:
 

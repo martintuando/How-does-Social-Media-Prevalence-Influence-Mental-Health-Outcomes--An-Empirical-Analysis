@@ -14,6 +14,10 @@ Twitter: Based on approximately 475 million geo-located tweets (Kinder-Kurlanda 
 
 Instrumental Variable (IV): Twitter adoption during the 2007 SXSW festival (Fujiwara et al., 2021) is used as an exogenous shock for causal identification.
 
+Facebook: SCI Data,  the intensity of social connections between two geographic areas. The core of this analysis relies on the share of a county’s Facebook friends living within 500 miles.
+
+Instrumental Variable (IV): Facebook early rollout (Braghieri et al., 2021) is used as an exogenous shock for causal identification.
+
 Health Data:
 
 Primary source: County Health Rankings & Roadmaps (CHR&R), a collaboration between the Robert Wood Johnson Foundation and the University of Wisconsin Population Health Institute.
@@ -27,10 +31,6 @@ Mortality data: CDC WONDER database.
 Handling Data Suppression
 
 Since the CDC suppresses case counts between 1–10 (Missing Not at Random - MNAR), I implemented a robust imputation strategy. Detailed documentation and the dedicated processing pipeline for this method can be found in my specialized project repository: MICPR (Multiple Imputation with Constrained Proportional Recalibration).
-
-Transformation
-
-All outcome variables are log-transformed ($y^* = \ln(y + 1)$) to model non-linear, over-proportional effects, assuming the impact of social media increases with the severity of existing distress.
 
 3. Control Variables
 
@@ -51,6 +51,3 @@ Infrastructure & Community: Social Associations (U.S. Census Bureau Economic Cen
 Socioeconomic & Demographic Factors: Population density, age structures, ethnicity, and education levels (U.S. Census/ACS), and industry-level unemployment rates (Bureau of Labor Statistics - BLS).
 data/: Processed data panels and county characteristics. For source variables, see the Data README.
 
-scripts/: R scripts covering database merges, CDC data imputation pipelines, and core 2SLS regressions.
-
-results/: Output directory containing regression tables (LaTeX and HTML formats) and visualizations.

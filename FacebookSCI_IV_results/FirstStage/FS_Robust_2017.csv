@@ -1,0 +1,26 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{6}{c}{id}\\
+   Model:                & (1)          & (2)          & (3)           & (4)           & (5)            & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   sh500m                & 0.0120$^{*}$ & 0.0194$^{*}$ & 0.0262$^{**}$ & 0.0278$^{**}$ & 0.0324$^{***}$ & 0.0378$^{***}$\\   
+                         & (0.0070)     & (0.0100)     & (0.0104)      & (0.0114)      & (0.0116)       & (0.0114)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   factor(census\_reg)   & Yes          & Yes          & Yes           & Yes           & Yes            & Yes\\  
+   factor(pop\_deciles)  & Yes          & Yes          & Yes           & Yes           & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations          & 3,101        & 3,093        & 3,093         & 3,093         & 3,093          & 3,093\\  
+   F-test                & 1.5618       & 1.1154       & 1.0247        & 0.88688       & 0.80912        & 0.75853\\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Clustered (state\_code) standard-errors in parentheses}}\\
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+

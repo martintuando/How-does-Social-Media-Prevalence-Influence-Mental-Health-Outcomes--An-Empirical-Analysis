@@ -105,9 +105,9 @@ $$
 - **Twitter adoption:** The number of unique county-level Twitter users aggregated over 2014–2015, transformed using the natural logarithm of the count plus one.
 - **Instrument:** The number of unique Twitter followers associated with SXSW who joined in March 2007, transformed using the natural logarithm of the count plus one.
 - **Pre-festival control:** The corresponding measure of Twitter activity before March 2007, included to account for pre-existing interest.
-- **\(X_c\):** A vector of county-level demographic, economic, and health-related controls.
-- **\(c\):** An index for counties.
-- **\(\varepsilon_c\):** The regression error term.
+- **$$X_c$$:** A vector of county-level demographic, economic, and health-related controls.
+- **$$c$$:** An index for counties.
+- **$$\varepsilon_c$$:** The regression error term.
 
 ### Identification and Robustness
 
@@ -136,7 +136,7 @@ The first stage tests whether the early-college instrument predicts the standard
 $$
 sh500m_c =
 \alpha_0+\alpha_1adopter_c+\alpha_2X_c+\varepsilon_c
-$$]
+$$
 
 **Reduced form**
 

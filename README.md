@@ -7,7 +7,7 @@ A central challenge is that social media exposure is not randomly distributed ac
 
 The first design exploits variation in Twitter activity associated with the South by Southwest (SXSW) festival in March 2007. The second uses Facebook's early expansion to U.S. colleges as an instrument for county-level social connectedness. Both approaches aim to identify causal effects by using historical variation in social media exposure.
 
-## 1. Data and Variables
+## Data and Variables
 
 ### Mental Health Outcomes
 
@@ -48,7 +48,7 @@ The analysis combines socioeconomic, demographic, and health-related variables f
 
 The control variables account for observable differences between counties, including population composition, economic conditions, healthcare access, and health-related behaviors.
 
-## 2. Empirical Strategy I: Twitter Adoption and the SXSW Festival
+## Empirical Strategy I: Twitter Adoption and the SXSW Festival
 
 The first design uses Twitter activity associated with the 2007 SXSW festival as an instrument for subsequent county-level Twitter adoption.
 
@@ -62,21 +62,21 @@ The analysis estimates OLS, first-stage, reduced-form, and 2SLS regressions. The
 
 The first stage tests whether the instrument predicts subsequent Twitter adoption:
 
-\[
+$$
 \begin{aligned}
 \ln(TwitterAdoption_c+1) ={}&
-\alpha_0\\
-&+\alpha_1\ln(SXSW_{c,March2007}+1)\\
-&+\alpha_2\ln(SXSW_{c,Pre}+1)\\
+\alpha_0 \\
+&+\alpha_1\ln(SXSW_{c,March2007}+1) \\
+&+\alpha_2\ln(SXSW_{c,Pre}+1) \\
 &+\alpha_3X_c+\varepsilon_c
 \end{aligned}
-\]
+$$
 
 **Reduced form**
 
 The reduced form examines the relationship between the instrument and mental health outcomes:
 
-\[
+$$
 \begin{aligned}
 \ln(MentalHealth_c+1) ={}&
 \gamma_0\\
@@ -84,13 +84,13 @@ The reduced form examines the relationship between the instrument and mental hea
 &+\gamma_2\ln(SXSW_{c,Pre}+1)\\
 &+\gamma_3X_c+\varepsilon_c
 \end{aligned}
-\]
+$$
 
 **Second stage**
 
 The second stage uses instrument-predicted Twitter adoption to estimate its effect on mental health:
 
-\[
+$$
 \begin{aligned}
 \ln(MentalHealth_c+1) ={}&
 \beta_0\\
@@ -98,7 +98,7 @@ The second stage uses instrument-predicted Twitter adoption to estimate its effe
 &+\beta_2\ln(SXSW_{c,Pre}+1)\\
 &+\beta_3X_c+\varepsilon_c
 \end{aligned}
-\]
+$$
 
 ### Variable Definitions
 
@@ -119,7 +119,7 @@ Additional pre-period tests examine whether the instrument is associated with Tw
 
 The causal interpretation ultimately depends on whether the instrument affects mental health through the instrumented Twitter exposure rather than through other channels. The pre-festival control, additional tests, and robustness analyses provide evidence relevant to this assumption, but cannot establish the exclusion restriction on their own.
 
-## 3. Empirical Strategy II: Facebook Adoption and Social Connectedness
+## Empirical Strategy II: Facebook Adoption and Social Connectedness
 
 The second design examines the relationship between Facebook social connectedness and mental health. It builds on the early-college rollout studied by Braghieri, Levy, and Makarin (2022).
 
@@ -133,40 +133,40 @@ Unlike the Twitter measure, which captures the prevalence of platform adoption, 
 
 The first stage tests whether the early-college instrument predicts the standardized social connectedness measure:
 
-\[
+$$
 sh500m_c =
 \alpha_0+\alpha_1adopter_c+\alpha_2X_c+\varepsilon_c
-\]
+$$]
 
 **Reduced form**
 
 The reduced form examines the relationship between early Facebook adoption and mental health outcomes:
 
-\[
+$$
 \ln(MentalHealth_c+1) =
 \gamma_0+\gamma_1adopter_c+\gamma_2X_c+\varepsilon_c
-\]
+$$
 
 **Second stage**
 
 The second stage uses instrument-predicted social connectedness to estimate its effect on mental health:
 
-\[
+$$
 \ln(MentalHealth_c+1) =
 \beta_0+\beta_1\widehat{sh500m_c}+\beta_2X_c+\varepsilon_c
-\]
+$$
 
 ### Variable Definitions
 
-- **\(sh500m_c\):** The share of a county's Facebook connections associated with locations within 500 miles, measured using a 2016 snapshot and standardized as a Z-score.
-- **\(adopter_c\):** An indicator equal to one for counties hosting one of the first 775 Facebook colleges and zero otherwise.
-- **\(X_c\):** A vector of county-level socioeconomic, demographic, and health-related controls, including employment characteristics, unemployment, age composition, and access to primary care.
-- **\(c\):** An index for counties.
-- **\(\varepsilon_c\):** The regression error term.
+- **$$sh500m_c$$:** The share of a county's Facebook connections associated with locations within 500 miles, measured using a 2016 snapshot and standardized as a Z-score.
+- **$$adopter_c$$:** An indicator equal to one for counties hosting one of the first 775 Facebook colleges and zero otherwise.
+- **$$X_c$$:** A vector of county-level socioeconomic, demographic, and health-related controls, including employment characteristics, unemployment, age composition, and access to primary care.
+- **$$c$$:** An index for counties.
+- **$$\varepsilon_c$$:** The regression error term.
 
 The design aims to isolate variation in social connectedness associated with Facebook's early expansion. Its causal interpretation depends on whether the early-college instrument affects mental health through the measured social connectedness variable rather than through other channels.
 
-## 4. Handling Suppressed CDC Mortality Data
+## Handling Suppressed CDC Mortality Data
 
 County-level mortality data from CDC WONDER may be suppressed when the number of reported deaths is small. This creates missing observations that require special treatment because suppression is related to the underlying death counts.
 
@@ -174,7 +174,7 @@ The analysis uses imputed mortality data to address this limitation. The data pr
 
 For details on the methodology and implementation, see [A Multi-Stage Imputation Pipeline](https://github.com/martintuando/A-Multi-Stage-Imputation-Pipeline).
 
-## 5. Results and Interpretation
+## Results and Interpretation
 
 The project estimates the relationship between social media exposure and mental health using two distinct sources of historical variation. The Twitter design focuses on adoption associated with the SXSW festival, while the Facebook design examines the geographic reach of social connections.
 
@@ -183,7 +183,7 @@ The empirical workflow includes OLS estimates, first-stage regressions, reduced-
 Regression tables and additional outputs are provided in the `results/` directory.
 
 
-## 7. Repository Structure
+## Repository Structure
 
 - `data/`: Processed datasets, county-level panels, and control variables. Data sources and preparation details are documented separately.
 - `scripts/`: R scripts for data preparation, database merges, mortality data processing, and the OLS, first-stage, reduced-form, and 2SLS regressions.
